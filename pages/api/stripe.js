@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         billing_address_collection: 'auto',
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
-          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/7yb25lzj/production/').replace('-webp', '.webp');
+          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/7yb25lzj/production/').replace('-webp', '.webp', '.png', '.jpg', '.jpeg');
 
           return {
             price_data: { 
