@@ -19,7 +19,7 @@ const ProductDetails = ({ product, products }) => {
     <>
       <div>
         
-        <div className='bg-gradient-to-t lg:bg-gradient-to-r from-gray-200 to-gray-50'>
+        <div className='bg-gradient-to-t lg:bg-gradient-to-r from-gray-200 to-white'>
           <div className="max-w-2xl mx-auto py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="grid grid-cols-1 gap-y-10 gap-x-6 lg:grid-cols-2 xl:gap-x-8 lg:items-center">
               <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-2 gap-x-6 xl:gap-x-8 order-2 lg:order-1">
