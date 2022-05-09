@@ -9,10 +9,9 @@ export default async function handler(req, res) {
         submit_type: 'pay',
         mode: 'payment',
         payment_method_types: ['card'],
-        billing_address_collection: 'auto',
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
-          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/7yb25lzj/production/');
+          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/7yb25lzj/production/').replace('.png');
 
           return {
             price_data: { 
