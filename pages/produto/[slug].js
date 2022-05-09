@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import Link from 'next/link';
 import { useStateContext } from '../../context/StateContext'
 import { client, urlFor } from '../../lib/client';
 
 import { AiOutlineStar, AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { RiWhatsappLine } from 'react-icons/ri'
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, price, content, highlights, details, review } = product
+  const { image, name, price, content, highlights, details, review, slug } = product
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext()
 
@@ -14,6 +16,8 @@ const ProductDetails = ({ product, products }) => {
 
     setShowCart(true);
   }
+
+  const urlencodedtext = `Olá!%20Gostaria%20de%20maiores%20informações%20do%20Produto%20${name}%20-%20https://ipsbras.vercel.app/produto/${slug.current}`
 
   return (
     <>
@@ -93,7 +97,17 @@ const ProductDetails = ({ product, products }) => {
               >
               Comprar Agora
               </button>
+              <Link href={`https://wa.me/5511991258064?text=${urlencodedtext}`}>
+                <a
+                target='_blank'
+                className="mt-10 w-full bg-green-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:opacity-75 focus:outline-none"
+                >
+                <RiWhatsappLine className='block w-6 h-6 mr-1' />
+                <span className='font-medium'>Atendimento WhatsApp</span>
+                </a>
+              </Link>
             </div>
+
           </div>
 
           <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
