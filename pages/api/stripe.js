@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         payment_method_types: ['card'],
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
-          const newImage = img.replace('https://cdn.sanity.io/images/7yb25lzj/production/').replace('.png');
+          const newImage = img.replace('image-', 'https://cdn.sanity.io/images/7yb25lzj/production/').replace('.png', '-png');
 
           return {
             price_data: { 
