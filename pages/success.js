@@ -21,7 +21,7 @@ const Success = () => {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className='flex flex-col justify-center items-center'>
           <div>
-            <BsBagCheckFill className='text-green-600 w-32 h-32' />
+            <BsBagCheckFill className='text-gray-700 w-32 h-32' />
           </div>
           <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4x'>Obrigado pelo seu pedido!</h2>
           <p className="my-2 text-red-600">Verifique sua caixa de entrada de e-mail para o recibo.</p>
