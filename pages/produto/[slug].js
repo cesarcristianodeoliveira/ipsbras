@@ -97,7 +97,7 @@ const ProductDetails = ({ product, products }) => {
               >
               Comprar Agora
               </button>
-              <Link href={`https://wa.me/5511991258064?text=${urlencodedtext}?lang=pt_br`}>
+              <Link href={`https://wa.me/5511991258064?text=${urlencodedtext}/?lang=pt_br`}>
                 <a
                 target='_blank'
                 className="mt-10 w-full bg-green-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:opacity-75 focus:outline-none"
