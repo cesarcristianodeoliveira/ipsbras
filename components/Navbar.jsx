@@ -12,14 +12,12 @@ const Navbar = () => {
       <div className='sticky top-0 w-full z-40 bg-white'>
         <nav className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-16'>
-            <div>
-              <Link href='/'>
-              <a className='flex items-center'>
-                <AiFillShopping className='mr-2 block w-6 h-6 text-gray-900' />
-                <h3 className='focus:outline-none font-bold text-3xl leading-none uppercase text-indigo-600 hover:text-indigo-700'>IPS</h3>
-              </a>
-              </Link>
-            </div>
+            <Link href='/'>
+            <a className='group flex items-center'>
+              <AiFillShopping className='mr-2 block w-6 h-6 text-gray-700 group-hover:text-gray-900' />
+              <h3 className='focus:outline-none font-bold text-3xl leading-none uppercase text-indigo-600 group-hover:text-indigo-700'>IPS</h3>
+            </a>
+            </Link>
             <div className="ml-4 flow-root lg:ml-6">
               <button className="group -m-2 p-2 flex items-center focus:outline-none" onClick={() => setShowCart(true)}>
               <AiOutlineShoppingCart
