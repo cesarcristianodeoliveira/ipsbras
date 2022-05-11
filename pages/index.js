@@ -18,7 +18,7 @@ const Home = ({ products, banners }) => {
 };
 
 export const getServerSideProps = async () => {
-  const queryProducts = `*[_type == "product"]`;
+  const queryProducts = `*[_type == "product"] | order(review desc)`;
   const products = await client.fetch(queryProducts);
 
   const queryBanners = `*[_type == "product" && isBanner == true] {
@@ -28,6 +28,7 @@ export const getServerSideProps = async () => {
     slug {
       current
     },
+    review,
     isBanner
   }`
   const banners = await client.fetch(queryBanners)
